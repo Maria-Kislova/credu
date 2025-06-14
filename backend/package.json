@@ -1,0 +1,22 @@
+{
+  "name": "@credu/backend",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "ts-node-dev --rs ./src/index.ts",
+    "build": "rimraf ./dist && tsc --build ./tsconfig.json",
+    "start": "node ./dist/index.js",
+    "types": "tsc --noEmit --project ./tsconfig.json",
+    "prettify": "prettier --log-level=warn --cache --write '{src/**/*,*}.{ts,tsx,js,json,yml,css}' '!**/{node_modules,dist}/**/*'"
+  },
+  "dependencies": {
+    "@trpc/server": "^11.3.1",
+    "cors": "^2.8.5",
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.0.0"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "credu",
+  "private": true,
+  "type": "module",
+  "version": "0.0.0",
+  "scripts": {
+    "b": "pnpm --filter @credu/backend",
+    "w": "pnpm --filter @credu/webapp",
+    "dev": "pnpm -r --parallel dev",
+    "types": "concurrently 'pnpm b types' 'pnpm w types'",
+    "prettify": "pnpm -r --parallel prettify"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "globals": "^16.2.0",
+    "prettier": "^3.5.3",
+    "rimraf": "^6.0.1",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.8.3"
+  }
+}

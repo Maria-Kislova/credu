@@ -1,0 +1,27 @@
+{
+  "name": "@credu/webapp",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "types": "tsc --noEmit --project ./tsconfig.json",
+    "prettify": "prettier --log-level=warn --cache --write '{src/**/*,*}.{ts,tsx,js,json,yml,css}' '!**/{node_modules,dist}/**/*'"
+  },
+  "dependencies": {
+    "@credu/backend": "workspace:*",
+    "@tanstack/react-query": "^5.80.6",
+    "@trpc/client": "^11.3.1",
+    "@trpc/react-query": "^11.3.1",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.2",
+    "@types/react-dom": "^19.1.2",
+    "@vitejs/plugin-react": "^4.4.1",
+    "vite": "^6.3.5"
+  }
+}
